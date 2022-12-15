@@ -1,0 +1,65 @@
+Matrix 행렬
+행(가로) 열(세로)
+
+단위행렬 E
+1
+A * E = A
+
+영행렬
+0
+A * 0 = 0
+
+역행렬
+A^-1
+A * A^-1 = E
+
+전치행렬
+At
+
+행렬의 곱연산
+
+(2 X 3) * (3 X 1) -> (2 X 1)
+
+(2 X 1) * (3 X 2) -> X
+
+(3 X 1) * (2 X 3) -> X
+A * B != B * A
+
+
+Transform Matrix 변환 행렬 
+
+이동 행렬 Translation Matrix
+
+1	0	0	0
+0	1	0	0 
+0	0	1	0
+Tx	Ty	Tz	1
+
+(1 X 4) * (4 X 4) -> (1 X 4)
+Vertex * TM = (x + Tx, y + Ty, z + Tz, w)
+
+크기 행렬 Scale Matrix
+
+Sx	0	0	0
+0	Sy	0	0 
+0	0	Sz	0
+0	0	0	1
+
+(1 X 4) * (4 X 4) -> (1 X 4)
+Vertex * SM = (x * Sx, y * Sy, z * Sz, w)
+
+회전 행렬 Rotation Matrix
+
+cθ	sθ	0	0
+-sθ cθ	0	0
+0	0	1	0
+0	0	0	1
+
+(1 X 4) * (4 X 4) -> (1 X 4)
+Vertex * RM = (θ만큼 회전된 x, θ만큼 회전된 y, z, w)
+
+Vertex * S * R * T
+W = S * R * T
+
+Vertex * W
+
